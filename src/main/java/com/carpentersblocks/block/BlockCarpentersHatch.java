@@ -339,9 +339,7 @@ public class BlockCarpentersHatch extends BlockCoverable {
     public boolean isLadder(IBlockAccess blockAccess, int x, int y, int z, EntityLivingBase entityLiving) {
         TEBase TE = getTileEntity(blockAccess, x, y, z);
 
-        return TE != null && Hatch.getType(TE) == Hatch.TYPE_HIDDEN
-                && Hatch.getPos(TE) == Hatch.POSITION_HIGH
-                && Hatch.getState(TE) == Hatch.STATE_OPEN;
+        return TE != null && Hatch.getPos(TE) == Hatch.POSITION_HIGH && Hatch.getState(TE) == Hatch.STATE_OPEN;
     }
 
     /**
